@@ -1,6 +1,6 @@
-# Conversor de Moedas (API)
+# Api de autenticação
 
-Este projeto é uma api RESTFULL simples 
+Este projeto é uma api de autenticação simples 
 
 # Requistos
  - É necessário ter o docker compose e o npm instalado 
@@ -20,7 +20,7 @@ Finalmente exacutar o comando:
    $ docker-compose up
 ```
  
- Por fim pode consumir a api por default em http://localhost:3000.
+ Por fim poderá consumir a api por padrão em http://localhost:3000.
  
 # Endpoints
  Existem 3 endpoints que poderão ser consumidos:
