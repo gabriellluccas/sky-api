@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const config = () => {    
+const open = () => {
     const {
         DB_PORT,
         DB_USER,
@@ -11,5 +11,5 @@ const config = () => {
     mongoose.set('useCreateIndex', true);
     return mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 }
-    
-module.exports = config
+const close = mongoose.disconnect
+module.exports = { open, close }

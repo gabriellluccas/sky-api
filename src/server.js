@@ -3,15 +3,15 @@ const dotenv = require('dotenv');
 const { mongoose } = require('./config');
 const router = require('./router');
 
-const server = async () => {
+const server = async (isTest = false) => {
 
   dotenv.config();
   const server = express();
   
   server.use(express.json());
   server.use(router);
-  await mongoose();
+  if(!isTest) await mongoose.open();
   return server
 }
   
-module.exports = server();
+module.exports = server;

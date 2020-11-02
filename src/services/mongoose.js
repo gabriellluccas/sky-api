@@ -1,7 +1,8 @@
 const { user } = require('../models');
 
 const mongoose = {
-  findOne: (query) => user.findOne(query),
+  findOne: (query = {}) => user.findOne(query),
+  deleteMany: (query = {}) => user.deleteMany(query),
 
   signUp: async ({
     name, email, password, phones = [],
