@@ -1,2 +1,3 @@
-const mongoose = require('./mongoose')
-module.exports = { mongoose }
+const mongoose = require('./mongoose');
+
+module.exports = { mongoose };
