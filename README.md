@@ -12,7 +12,7 @@ Este projeto é uma api RESTFULL simples
    $ npm install
 ```
 
-Depois é necessário configurar as variáveis de ambiente no arquivo .env como no arquivo .env.example, existem duas variaveis de ambiente que é a porta e o uri do banco.
+Depois é necessário configurar as variáveis de ambiente no arquivo .env como no arquivo .env.example.
 
 Finalmente exacutar o comando: 
 
@@ -24,10 +24,15 @@ Finalmente exacutar o comando:
  
 # Endpoints
  Existem 3 endpoints que poderão ser consumidos:
-  - GET /veiculos - busca todos os veiculos
-  - GET /veiculos/find - busca veiculos de acordo com a query
-  - GET /veiculos:id - busca um veiculos especifico 
-  - POST /veiculos - cadastra  um veiculo
-  - PUT /veiculos/:id - atualiza um veiculo
-  - PATCH /veiculos/:id - atualiza parcialmente um veiculo
-  - DELETE /veiculos/:id - deleta de um veiculo
+  - POST /sign-up - Cadastra o usuário
+  - POST /sign-in - Login do usuário 
+  - GET /users/:id - Busca o usuário de acordo com o id passado
+  
+# Testes
+ Para rodar os testes é necessário criar o arquivo .env.test com o NODE_ENV=test além das outras variáveis como o arquivo .env.example
+ Deverá executar os testes dentro do container se o DB_LINK_NAME for diferente de 0.0.0.0
+ Foram feitos 3 testes de integração no endpoint POST /sign-up
+```
+   $ npm run test
+```
+ 
