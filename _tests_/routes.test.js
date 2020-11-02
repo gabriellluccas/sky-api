@@ -69,7 +69,6 @@ describe('Tests for route - POST /sign-up', () => {
                 expect(res.statusCode).toBe(400)
                 expect(Array.isArray(res.body.message)).toBe(true)
                 expect(typeof res.body.message[0]).toBe('string')
-                expect(typeof res.body.message[0]).toBe('string')
             })
     })
 
